@@ -1,0 +1,35 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Titles from '../components/titles.astro';
+import personalPhoto from '../images/PortfolioImage1.png';
+---
+
+<Layout title = "Jonathan Byrne's portfolio">
+	<Titles></Titles>
+	<section class = "page-content">
+		<div class = "container">
+			<img class = "displayed" src = {personalPhoto} width = "320" height = "440"></img>
+			<h2>About Me</h2>
+			<p>
+				My name is Jonathan Byrne, a Games Computing student at the University of Lincoln. I am currently in my 4th year of MComp study. I have experience with: Python, C#, C++, Java (self-taught), Unity and Unreal, along with OpenCl and PhysX from my time at university. I have also participated in game jams both as a solo developer and working with others in a team. I am a keen learner who is willing to take on new challenges and improve my skillset as a programmer.
+			</p>
+			<h3>About this website</h3>
+			<p>
+				On this website, there is a section detailing who I am and what I have done. In the projects tab I have mentioned several projects that I have done inside and outside of my university curriculum with the links to my github repo for each. For all my github projects visit the link <a href="https://github.com/JonBYR?tab=repositories">here</a>.
+			</p>
+			<h3>A Level Qualifications</h3>
+			<ul>
+				<li>Maths: A</li>
+				<li>Further Maths: B</li>
+				<li>Chemistry: B</li>
+				<li>Physics (AS): C</li>
+				<li>EPQ: C</li>
+			</ul>
+			<h3>University Qualifications</h3>
+			<ul>
+				<li>Bsc: First Class Honours</li>
+			</ul>
+		</div>
+	</section>
+</Layout>
+

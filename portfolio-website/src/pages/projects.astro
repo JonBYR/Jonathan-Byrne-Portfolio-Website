@@ -1,0 +1,22 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Titles from '../components/titles.astro';
+import Card from '../components/Card.astro';
+const allProjects = await Astro.glob('../githubprojects/*.md');
+---
+
+<Layout title = "My Projects">
+    <Titles heading = "Projects" text = "These are projects that I have worked on throughout my time in and out of university"></Titles>
+    <section class = "page-content">
+        <div class = "container">
+            {allProjects.map(proj => (
+                <Card>
+                    <h3>{proj.frontmatter.title}</h3>
+                    <img class = "displayed" src = {proj.frontmatter.icon} width = "720" height = "640"></img>
+                    <p>{proj.frontmatter.description}</p>
+                    <a class = "btn" href = {proj.frontmatter.link}>Github Repo</a>
+                    </Card>
+            ))}
+        </div>
+    </section>
+</Layout>
